@@ -1,6 +1,6 @@
-from django.conf.urls import url
-from . import views
-
-urlpatterns = [
-    url(r'^pizza', views.test_view)
+from django.conf.urls import url 
+from backend import views 
+ 
+urlpatterns = [ 
+    url(r'^pizza$', views.test_response)
 ]
