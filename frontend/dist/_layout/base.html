@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>Diletto</title>
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+  <body>
+    <header class="header">   
+      <div ng-controller="MainController">
+        <nav ng-model="way">
+          <ul class="nav">
+            <li><a href="http://{{way.name}}/{{way.lang}}/pizza">pizza</a></li>
+            <li><a href="http://{{way.name}}/{{way.lang}}/drinks">drinks</a></li>
+            <li><a href="http://{{way.name}}/{{way.lang}}/salads">salads</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="wrapper">
+    </div>
+    <footer class="footer">
+      <p>Footer </p>
+    </footer>
+  </body>
+</html>

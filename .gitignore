@@ -28,7 +28,6 @@ media
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -243,7 +242,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Storybook build outputs
 .out
@@ -484,4 +482,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-# End of https://www.toptal.com/developers/gitignore/api/python,django,node,vscode,pycharm
