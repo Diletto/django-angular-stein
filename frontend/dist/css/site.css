@@ -1,0 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(0%, -50%); }
+
+ul.nav {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%; }
+  ul.nav li {
+    list-style-type: none; }
+    ul.nav li a {
+      padding: 10px; }
