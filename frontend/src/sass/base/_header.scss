@@ -1,5 +1,5 @@
 @import './_var';
-@import '../mixins/_font-nav';
+@import '../mixins/_font';
 
 .main-menu {
     .nav{
@@ -24,7 +24,7 @@
         }
     }
     a {
-        @include font-nav();
+        @include font();
     }
 }
 
@@ -34,7 +34,7 @@
             font-weight: bold;
         }
         a {
-            @include font-nav($black, false, $size-text-smaller);
+            @include font($black, false, $size-text-smaller);
         }
     }
 }

@@ -1,11 +1,13 @@
 @import '../mixins/_center';
 @import '../mixins/_make-container';
 @import '../base/_var';
+body{
+    background-image: url('../img/paper-3161.jpg');
+    background-size: $backgroud-image-size;
+}
 .main-container {
     @include make-container();
     max-width: $container-max-widths-xl;
-    background-image: url('../img/paper-3161.jpg');
-    background-size: $backgroud-image-size;
 }
 
 .controller{

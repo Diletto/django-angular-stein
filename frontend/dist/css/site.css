@@ -1,12 +1,14 @@
+body {
+  background-image: url("../img/paper-3161.jpg");
+  background-size: 20%; }
+
 .main-container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
-  max-width: 1140px;
-  background-image: url("../img/paper-3161.jpg");
-  background-size: 20%; }
+  max-width: 1140px; }
 
 .controller {
   padding: 0 !important;
@@ -52,3 +54,14 @@
 
 .top-15 {
   top: 15% !important; }
+
+.footer {
+  background-color: #EDAE01;
+  height: 30px;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none; }
+  .footer:hover {
+    color: black; }

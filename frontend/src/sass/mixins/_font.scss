@@ -1,4 +1,4 @@
-@mixin font-nav($color-text: $white, $upper-case : true, $size : $size-text) {
+@mixin font($color-text: $white, $upper-case : true, $size : $size-text) {
     color: $color-text;
     font-size: $size;
     font-family: 'Noto Sans', sans-serif;
