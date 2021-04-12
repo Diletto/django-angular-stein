@@ -1,8 +1,31 @@
-header.header    
-    div(ng-controller="MainController")
-        nav(ng-model = "way")
-            -var url = "http://{{way.name}}/{{way.lang}}/"
-            ul.nav
-                each item in ["pizza", "drinks", "salads"]
-                    li
-                        a(href = url + item) #{item}
+header.header.position-relative
+    div.row.main-menu
+        div.col-2
+            div.logo
+                img.img-fluid(src="img/logo.png", alt="logo.png")
+        div.col-6.pe-0
+            div.controller(ng-controller="MainController")
+                div.d-flex.align-items-center.h-100
+                    nav.w-100.h-25(ng-model = "way")
+                        -var url = "http://{{way.name}}/{{way.lang}}/"
+                        ul.nav.h-100  
+                            each item in [{url : "pizza", name : "ПІЦЦА"}, {url : "drinks", name : "НАПОЇ"}, {url : "salads", name : "САЛАТИ"}]
+                                li.d-block.col.border-start.border-end.w-100.h-100
+                                    a.d-block.w-100.h-100.position-relative(href = url + item.url)
+                                        p.position-absolute.top-50.start-50.translate-middle #{item.name}
+        div.col-4.ps-0.d-flex.align-items-center
+            div.controller
+                div.d-flex.align-items-center.h-100
+                    a.order.d-block.w-100.h-25.border-start.border-end.position-relative(href='#') 
+                        p.position-absolute.top-50.start-50.translate-middle.text-nowrap Замовити&nbsp;&nbsp;&nbsp;
+                            b 0&nbsp;грн
+    div.addit-menu.position-absolute.top-15.end-0.d-flex.flex-row-reverse
+        div.px-2
+            a(href="#") UA 
+        div.px-2 
+            a(href="#") Вхід 
+        div.px-2 
+            a(href="#") Реєстрація
+        div.px-2 
+            a(href="#") Перевірити статус замовлення 
+        

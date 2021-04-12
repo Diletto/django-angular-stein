@@ -1,9 +1,16 @@
 @import '../mixins/_center';
-body {
-    padding: 0;
-    margin: 0;
-    font-family: Verdana, Geneva, sans-serif;
+@import '../mixins/_make-container';
+@import '../base/_var';
+.main-container {
+    @include make-container();
+    max-width: $container-max-widths-xl;
+    background-image: url('../img/paper-3161.jpg');
+    background-size: $backgroud-image-size;
 }
-.wrapper{
-    @include center;
+
+.controller{
+    padding: 0!important;
+    margin: 0!important;
+    width: 100%;
+    height: 100%;
 }

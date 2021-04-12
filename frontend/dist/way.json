@@ -1,7 +1,7 @@
 {
     "way":
     {
-        "name":"localhost:8081",
+        "name":"localhost:3000",
         "lang":"ua"
     }
 }

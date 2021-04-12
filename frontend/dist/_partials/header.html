@@ -1,12 +1,36 @@
 
-<header class="header">   
-  <div ng-controller="MainController">
-    <nav ng-model="way">
-      <ul class="nav">
-        <li><a href="http://{{way.name}}/{{way.lang}}/pizza">pizza</a></li>
-        <li><a href="http://{{way.name}}/{{way.lang}}/drinks">drinks</a></li>
-        <li><a href="http://{{way.name}}/{{way.lang}}/salads">salads</a></li>
-      </ul>
-    </nav>
+<header class="header position-relative">
+  <div class="row main-menu">
+    <div class="col-2">
+      <div class="logo"><img class="img-fluid" src="img/logo.png" alt="logo.png"/></div>
+    </div>
+    <div class="col-6 pe-0">
+      <div class="controller" ng-controller="MainController">
+        <div class="d-flex align-items-center h-100">
+          <nav class="w-100 h-25" ng-model="way">
+            <ul class="nav h-100"> 
+              <li class="d-block col border-start border-end w-100 h-100"><a class="d-block w-100 h-100 position-relative" href="http://{{way.name}}/{{way.lang}}/pizza">
+                  <p class="position-absolute top-50 start-50 translate-middle">ПІЦЦА</p></a></li>
+              <li class="d-block col border-start border-end w-100 h-100"><a class="d-block w-100 h-100 position-relative" href="http://{{way.name}}/{{way.lang}}/drinks">
+                  <p class="position-absolute top-50 start-50 translate-middle">НАПОЇ</p></a></li>
+              <li class="d-block col border-start border-end w-100 h-100"><a class="d-block w-100 h-100 position-relative" href="http://{{way.name}}/{{way.lang}}/salads">
+                  <p class="position-absolute top-50 start-50 translate-middle">САЛАТИ</p></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 ps-0 d-flex align-items-center">
+      <div class="controller">
+        <div class="d-flex align-items-center h-100"><a class="order d-block w-100 h-25 border-start border-end position-relative" href="#"> 
+            <p class="position-absolute top-50 start-50 translate-middle text-nowrap">Замовити&nbsp;&nbsp;&nbsp;<b>0&nbsp;грн</b></p></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="addit-menu position-absolute top-15 end-0 d-flex flex-row-reverse">
+    <div class="px-2"><a href="#">UA </a></div>
+    <div class="px-2"> <a href="#">Вхід </a></div>
+    <div class="px-2"> <a href="#">Реєстрація</a></div>
+    <div class="px-2"> <a href="#">Перевірити статус замовлення </a></div>
   </div>
 </header>
