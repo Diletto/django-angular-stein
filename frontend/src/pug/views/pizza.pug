@@ -1,4 +1,16 @@
-div.cont(ng-controller = "PizzaController")
-    div Pizza 
-    div(ng-model = "message") {{message}}
+extends ../_layout/_main-layout
+block vars
+    - var controller = 'PizzaController'
+block content
+    include ../templates/line-name
+    include ../templates/content-block
+    include ../templates/content-block
+    include ../templates/content-block
+    include ../templates/content-block
+    include ../templates/line-name
+    include ../templates/content-block
+    include ../templates/content-block
+    include ../templates/content-block
+    include ../templates/content-block
+    
     

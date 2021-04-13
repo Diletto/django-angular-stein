@@ -1,6 +1,6 @@
 @import './_var';
 @import '../mixins/_font';
-
+@import '../mixins/_add-icon';
 .main-menu {
     .nav{
     
@@ -12,14 +12,7 @@
     .order {
         background-color: $orange;
         > p::before{
-            content: "";
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            -webkit-mask-image : url("../img/shopping-cart.svg");
-            mask-image: url("../img/shopping-cart.svg");
-            background-color: $white;
-            vertical-align: middle;
+            @include add-icon("../img/shopping-cart.svg", 20px, 20px, $white);
             margin: 0 10px 4px 0;
         }
     }

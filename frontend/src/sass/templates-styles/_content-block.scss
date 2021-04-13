@@ -1,0 +1,50 @@
+.content-item{
+    * {
+        padding: 10px;
+        width: 100%;
+    }
+    p{
+        margin: 0;
+    }
+    margin: 10px 0;
+    border: 3px solid $brown;
+    .name {
+        @include font($black, false, $size-text-max);
+        font-weight: bolder;
+    }
+    .ingred{
+        @include font($black, false, $size-text);
+        font-weight: bolder;  
+    }
+    .weight{
+        @include font($black, false, $size-text-smaller);
+        padding: 0;
+        font-style: italic;
+    }
+    .prise-block{
+        .prise{
+            width: auto;
+        }
+        span{
+            padding: 0; 
+        }
+        .number{
+            @include font($black, false, $size-text-max + 15px);
+            font-weight:bold; 
+            white-space: nowrap
+        }
+        .hrn{
+            @include font($black, false, $size-text-min);
+            font-style: italic;
+        }
+    }
+    .add-to-list{
+        background-color: $red;
+        border-color: $red;
+        color: $white;
+        padding: 0;
+        &:hover{
+            color: $white;
+        }
+    }
+}

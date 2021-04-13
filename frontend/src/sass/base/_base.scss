@@ -8,6 +8,7 @@ body{
 .main-container {
     @include make-container();
     max-width: $container-max-widths-xl;
+    margin-bottom: $height-line;
 }
 
 .controller{

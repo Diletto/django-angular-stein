@@ -1,13 +1,19 @@
 $backgroud-image-size: 20%;
+
+$size-text-max : 20px;
+$size-text-bigger : 18px;
 $size-text : 16px;
 $size-text-smaller : 14px;
+$size-text-min : 12px;
 
+$brown : #7F2415;
 $burgundy : #7F152E;
 $red : #D61800;
 $yellow : #EDAE01;
 $orange : #E94F08;
 $white : white;
 $black : black;
+$height-line : 30px;
 
 $container-padding-x: var(--bs-gutter-x,.75rem);
 $container-max-widths-sm: 540px;
