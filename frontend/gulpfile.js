@@ -32,7 +32,7 @@ gulp.task('cleanOldPugGeneration', function () {
   });
   
 gulp.task('pug', function () {
-    return gulp.src('./src/pug/**/*.pug')
+    return gulp.src(['./src/pug/**/*.pug','!./src/pug/**/_*.pug'])
       .pipe(pug({
         pretty: true
       }))

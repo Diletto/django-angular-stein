@@ -1,0 +1,11 @@
+@import './_var';
+@media screen and (min-width: $media-min-widths-lg) {
+    .block-10-cols{
+        margin: 10px $magrig-1-col!important;
+    }
+}
+
+.block-10-cols{
+    margin: 10px 0;
+    border: 3px solid $brown;
+}

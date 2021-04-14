@@ -70,6 +70,38 @@ body {
   .footer:hover {
     color: black; }
 
+@media screen and (min-width: 992px) {
+  .block-10-cols {
+    margin: 10px calc(100%/12) !important; } }
+
+.block-10-cols {
+  margin: 10px 0;
+  border: 3px solid #7F2415; }
+
+.profile .name {
+  color: black;
+  font-size: 35px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none; }
+  .profile .name:hover {
+    color: black; }
+
+.profile .email {
+  color: black;
+  font-size: 18px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none; }
+  .profile .email:hover {
+    color: black; }
+
+.profile .phone {
+  color: black;
+  font-size: 18px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none; }
+  .profile .phone:hover {
+    color: black; }
+
 .content-item {
   margin: 10px 0;
   border: 3px solid #7F2415; }

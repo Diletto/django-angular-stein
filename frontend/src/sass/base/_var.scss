@@ -13,6 +13,7 @@ $yellow : #EDAE01;
 $orange : #E94F08;
 $white : white;
 $black : black;
+
 $height-line : 30px;
 
 $container-padding-x: var(--bs-gutter-x,.75rem);
@@ -21,3 +22,8 @@ $container-max-widths-md: 720px;
 $container-max-widths-lg: 960px;
 $container-max-widths-xl: 1140px;
 $container-max-widths-xxl: 1320px;
+
+
+$media-min-widths-lg: 992px;
+
+$magrig-1-col : calc(100%/12);
