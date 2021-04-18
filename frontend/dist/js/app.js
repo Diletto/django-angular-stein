@@ -4,12 +4,12 @@ var app = angular.module('app', ["ngRoute"])
         let lang = "/:lang";
         $routeProvider.when('/',
         {
-            templateUrl:'views/profile.html',
+            templateUrl:'views/pizza.html',
             controller:'PizzaController'
         });
         $routeProvider.when(lang + '/pizza',
         {
-            templateUrl:'views/profile.html',
+            templateUrl:'views/pizza.html',
             controller:'PizzaController'
         });
         $routeProvider.when(lang + '/drinks',

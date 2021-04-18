@@ -36,10 +36,12 @@ gulp.task('pug', function () {
       .pipe(pug({
         pretty: true
       }))
-      .on('error', function (err) {
-        process.stderr.write(err.message ,'\n');
+      .on('error',
+       function (err) {
+        console.log(err.message ,'\n');
         this.emit('end');
-      })
+      }
+      )
       .pipe(gulp.dest(paths.htmlDist));
   });
   

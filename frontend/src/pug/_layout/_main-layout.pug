@@ -1,5 +1,6 @@
 div.wrapper
     block vars
     div.controller(ng-controller = controller)
-        div.row.row-cols-1.row-cols-sm-2.row-cols-lg-3
-            block content
+        div.row.row-cols-1.row-cols-sm-2.row-cols-lg-3(ng-repeat = "itemList in list.items")
+            include ../templates/line-name
+            include ../templates/content-block

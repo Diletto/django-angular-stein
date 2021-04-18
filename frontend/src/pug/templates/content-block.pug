@@ -1,9 +1,10 @@
-div.col
+div.col(ng-repeat = "it in itemList.items")
     div.content-item
-        p.name.text-center Гавайська
-        img(src="../img/pizzas/gavai.webp", alt="havai")
-        p.ingred.text-center Куряче філе, Маринований солодкий перець, Ананаси, Класичний соус
-        p.weight.text-center 510г
+        p.name.text-center {{it.name}}
+        img(src="{{it.img}}", alt="havai") 
+        //- {{it.img}}
+        p.ingred.text-center {{it.ingridients}}
+        p.weight.text-center {{it.weight}}г
         div.row.prise-block.m-0
             div.col
                 include ../_partials/_price

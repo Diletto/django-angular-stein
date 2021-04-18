@@ -15,6 +15,7 @@
     .ingred{
         @include font($black, false, $size-text);
         font-weight: bolder;  
+        height: $row-height*2;
     }
     .weight{
         @include font($black, false, $size-text-smaller);
