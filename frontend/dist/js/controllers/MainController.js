@@ -1,7 +1,10 @@
-app.controller("MainController", 
-    function($scope, $http){
-        $http({method: 'GET', url: 'way.json'}).
-            then(function success(response) {
-                $scope.way=response.data.way;
-        });
-})
+app.controller("MainController", MainController)
+
+function MainController($scope, $http){
+    tempthis = this
+    $http({method: 'GET', url: 'way.json'}).
+    then(function success(response) {
+        tempthis.way=response.data.way})
+    $scope.MainController = this;
+    
+}

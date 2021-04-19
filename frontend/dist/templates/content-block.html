@@ -3,7 +3,7 @@
   <div class="content-item">
     <p class="name text-center">{{it.name}}</p><img src="{{it.img}}" alt="havai"/>
     <p class="ingred text-center">{{it.ingridients}}</p>
-    <p class="weight text-center">{{it.weight}}г</p>
+    <p class="weight text-center">{{it.weight}}{{it.measure}}</p>
     <div class="row prise-block m-0">
       <div class="col">
         <div class="position-relative price-wrap m-0 p-0 h-100">
@@ -11,7 +11,8 @@
         </div>
       </div>
       <div class="col p-1">
-        <button class="add-to-list btn">Додати до замовлення</button>
+        <button class="add-to-list btn" ng-click="undefined.PushToOrder()">Додати до замовлення</button>
+        <!--(ng-click="") -->
       </div>
     </div>
   </div>

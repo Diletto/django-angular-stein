@@ -1,23 +1,22 @@
 var app = angular.module('app', ["ngRoute"])
     .config(function($routeProvider,$locationProvider){
         $locationProvider.html5Mode(true);
-        let lang = "/:lang";
         $routeProvider.when('/',
         {
             templateUrl:'views/pizza.html',
             controller:'PizzaController'
         });
-        $routeProvider.when(lang + '/pizza',
+        $routeProvider.when('/pizza',
         {
             templateUrl:'views/pizza.html',
             controller:'PizzaController'
         });
-        $routeProvider.when(lang + '/drinks',
+        $routeProvider.when('/drinks',
         {
             templateUrl:'views/drinks.html',
             controller:'DrinksController'
         });
-        $routeProvider.when(lang + '/salads',
+        $routeProvider.when('/salads',
         {
             templateUrl:'views/salads.html',
             controller:'SaladsController'

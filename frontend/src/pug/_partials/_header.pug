@@ -7,7 +7,7 @@ header.header.position-relative
             div.controller(ng-controller="MainController")
                 div.d-flex.align-items-center.h-100
                     nav.w-100.h-25(ng-model = "way")
-                        -var url = "http://{{way.name}}/{{way.lang}}/"
+                        -var url = "http://{{MainController.way.name}}/"
                         ul.nav.h-100  
                             each item in [{url : "pizza", name : "ПІЦЦА"}, {url : "drinks", name : "НАПОЇ"}, {url : "salads", name : "САЛАТИ"}]
                                 li.d-block.col.border-start.border-end.w-100.h-100
@@ -22,7 +22,7 @@ header.header.position-relative
     div.addit-menu.position-absolute.top-15.end-0.d-flex.flex-row-reverse
         div.px-2
             a(href="#") UA 
-        div.px-2 
+        div.px-2
             a(href="#") Вхід 
         div.px-2 
             a(href="#") Реєстрація
