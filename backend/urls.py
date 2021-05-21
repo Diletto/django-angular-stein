@@ -1,6 +1,8 @@
 from django.conf.urls import url 
-from backend import views 
+from . import views
  
-urlpatterns = [ 
-    url(r'^pizza$', views.test_response)
+urlpatterns = [
+    url(r'^drinks/(?P<id>[0-9]+)$', views.drink_response),
+    url(r'^drinks', views.drink_response_all),
+    url(r'', views.test_response)
 ]
