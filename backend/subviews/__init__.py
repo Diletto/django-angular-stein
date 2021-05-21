@@ -1,0 +1,1 @@
+from .drinks_view import *
