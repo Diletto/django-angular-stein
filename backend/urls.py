@@ -8,5 +8,7 @@ urlpatterns = [
     url(r'^pizza', views.get_all_pizzas),
     url(r'^salads/(?P<id>[0-9]+)$', views.salad_response),
     url(r'^salads', views.salad_response_all),
+    url(r'^orders/(?P<id>[0-9]+)$', views.get_order_by_id),
+    url(r'^orders', views.orders_request),
     url(r'', views.test_response)
 ]
