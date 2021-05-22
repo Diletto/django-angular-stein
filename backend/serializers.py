@@ -7,16 +7,23 @@ class DrinkSerializer(serializers.ModelSerializer):
         model = Drink
         fields = ('itemClass', 'items')
 
+
 class PitsaClassSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PitsaClass
-        fields = ('itemClass',
-                'items')
+        fields = ('itemClass', 'items')
+
 
 class SaladClassSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SaladClass
-        fields = ('itemClass',
-                'items')
+        fields = ('itemClass', 'items')
+
+
+class OrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Order
+        fields = ('_id', 'goods', 'totalPrice', 'user', 'user_id')
