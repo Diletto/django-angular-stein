@@ -13,3 +13,10 @@ class PitsaClassSerializer(serializers.ModelSerializer):
         model = PitsaClass
         fields = ('itemClass',
                 'items')
+
+class SaladClassSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SaladClass
+        fields = ('itemClass',
+                'items')
