@@ -8,7 +8,7 @@ def drink_response_all(request):
     try:
         all_drinks_classes = Drink.objects.filter()
     except Drink.DoesNotExist:
-        return JsonResponse({'message': 'The tutorial does not exist'})
+        return JsonResponse({'message': 'No such drinks item'})
 
     response = []
 
@@ -24,12 +24,19 @@ def drink_response(request, id):
     try:
         data = Drink.objects.filter()
     except Drink.DoesNotExist:
-        return JsonResponse({'message': 'The tutorial does not exist'})
+        return JsonResponse({'message': 'No such drinks item'})
+
     response = None
+
     for drink_class in data:
         serialized_class_obj = DrinkSerializer(drink_class).data
         serialized_class_obj['items'] = json.dumps(json.loads(serialized_class_obj['items']), ensure_ascii=False)
         for drink in json.loads(serialized_class_obj['items']):
             if drink['id'] == id:
                 response = drink
+
+    if not response:
+        response = "No such drinks item"
+        return JsonResponse({"message":response}, safe=False, json_dumps_params={'ensure_ascii': False})
+
     return JsonResponse(response, safe=False, json_dumps_params={'ensure_ascii': False})
