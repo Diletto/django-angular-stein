@@ -1,32 +1,14 @@
 app.controller('PizzaController', PizzaController)
-function PizzaController($scope){
-    this.list = model;
+function PizzaController($scope, $http){
     this.PushToOrder = PushToOrder;
+    var temp = this;
     $scope.PizzaController = this;
+    $http({method: "GET", url: "http://localhost:8080/pizza"}).then(function success(response)
+    {
+        temp.list = response.data;
+        console.log("temp  : " + temp.list);
+    });
 }
 function PushToOrder(){
     alert("Would you a pizza?");
-};
-
-var model = {
-
-    items:[{
-        itemClass:"CLASSIC",
-        items: [
-            { name: "Гавайська",ingridients: "Куряче філе, Маринований солодкий перець, Ананаси, Класичний соус",img:"../img/pizzas/gavai.webp",weight : 250, measure:"г", price: 220 },
-            {  name: "Маргарита",ingridients:"Куряче філе" ,img:"../img/pizzas/margarita.webp",weight : 120,  measure:"г", price: 230 },
-            {  name: "Карбонара",img:"../img/pizzas/barbeku.webp",weight : 520, measure:"г", price: 162 },
-            { name: "Гавайська",ingridients: "Куряче філе, Маринований солодкий перець, Ананаси, Класичний соус",img:"../img/pizzas/gavai.webp",weight : 250, measure:"г",  price: 220 },
-            {  name: "Маргарита",img:"../img/pizzas/margarita.webp",weight : 120,  measure:"г", price: 230 },
-            {  name: "Карбонара",img:"../img/pizzas/barbeku.webp",weight : 520, measure:"г",  price: 162 },
-        ]
-    },
-    {
-        itemClass:"Supreme",
-        items: [
-            {  name: "Гавайська",img:"../img/pizzas/gavai.webp",weight : 120,  measure:"г", price: 176 },
-            { name: "Барбекю",img:"../img/pizzas/barbeku.webp",weight : 120,  measure:"г", price: 204 },
-            { name: "Гавайська",img:"../img/pizzas/barbeku.webp",weight : 120,  measure:"г", price: 200 }
-        ]
-    }]
 };

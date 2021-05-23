@@ -1,4 +1,6 @@
 include ../_partials/_profile-block
-include ../templates/line-name
-include ../templates/order-block
-include ../templates/order-block
+div.line.w-100.position-relative
+    p.name.position-absolute.top-50.start-50.translate-middle.text-nowrap Замовлення
+div.controller(ng-controller = "OrdersController")
+    div(ng-repeat = "itemList in OrdersController.list.items")
+        include ../templates/order-block

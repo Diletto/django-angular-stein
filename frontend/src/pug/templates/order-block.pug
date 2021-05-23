@@ -3,10 +3,14 @@ block content
     div.order.row.m-0
         div.text.col
             p.number.text-center Замовлення № 
-                b 4353
-            p.content Маргарита 1 <br/>Гавайська 2<br/> Фанта 1л 4
+                b {{itemList._id}}
+            div.content(ng-repeat = "it in itemList.goods") 
+                p {{it.name}} {{it.weight}} {{it.measure}} <br/>
             div.wrap
-                include ../_partials/_price
+                div.position-relative.price-wrap.m-0.p-0.h-100
+                    div.position-absolute.top-50.start-50.translate-middle.price
+                        span.number {{itemList.totalPrice}}
+                        span.hrn грн
         div.status.col-4.my-auto
             img.w-75.mx-auto.d-block(src="img/way.svg", alt="avatar")
-            p.status-text.text-center Прямує до замовника
+            p.status-text.text-center Замовник : {{itemList.user}}

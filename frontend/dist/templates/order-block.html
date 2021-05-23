@@ -2,16 +2,18 @@
 <div class="col-12 col-lg-10 block-10-cols p-2">
   <div class="order row m-0">
     <div class="text col">
-      <p class="number text-center">Замовлення № <b>4353</b></p>
-      <p class="content">Маргарита 1 <br/>Гавайська 2<br/> Фанта 1л 4</p>
+      <p class="number text-center">Замовлення № <b>{{itemList._id}}</b></p>
+      <div class="content" ng-repeat="it in itemList.goods"> 
+        <p>{{it.name}} {{it.weight}} {{it.measure}} <br/></p>
+      </div>
       <div class="wrap">
         <div class="position-relative price-wrap m-0 p-0 h-100">
-          <div class="position-absolute top-50 start-50 translate-middle price"><span class="number">{{it.price}}</span><span class="hrn">грн</span></div>
+          <div class="position-absolute top-50 start-50 translate-middle price"><span class="number">{{itemList.totalPrice}}</span><span class="hrn">грн</span></div>
         </div>
       </div>
     </div>
     <div class="status col-4 my-auto"><img class="w-75 mx-auto d-block" src="img/way.svg" alt="avatar"/>
-      <p class="status-text text-center">Прямує до замовника</p>
+      <p class="status-text text-center">Замовник : {{itemList.user}}</p>
     </div>
   </div>
 </div>

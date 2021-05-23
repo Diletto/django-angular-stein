@@ -1,30 +1,14 @@
 app.controller('DrinksController', DrinksController)
-
-function DrinksController($scope){
-    this.list = drinks_model;
+function DrinksController($scope, $http){
+    this.PushToOrder = PushToOrder;
+    var temp = this;
     $scope.DrinksController = this;
-}
-
-drinks_model = {
-    items:[{
-        itemClass:"COLD DRINKS",
-        items: [
-            { name: "Coca Cola",img:"../img/pizzas/gavai.webp",weight : 0.5,  measure:"л", price: 20 },
-            { name: "Sprite",img:"../img/pizzas/gavai.webp",weight : 0.75, measure:"л",price: 25 },
-            { name: "Pepsi Cola",img:"../img/pizzas/gavai.webp",weight : 0.75,measure:"л", price: 15 },
-            { name: "7Up",img:"../img/pizzas/gavai.webp",weight : 0.75,measure:"л", price: 20 },
-            { name: "Fanta",img:"../img/pizzas/gavai.webp",weight : 0.75, measure:"л",price: 20 },
-            { name: "Juice",img:"../img/pizzas/gavai.webp",weight : 1,measure:"л", price: 30 },
-        ]
-    },
+    $http({method: "GET", url: "http://localhost:8080/drinks"}).then(function success(response)
     {
-        itemClass:"HOT DRINKS",
-        items: [
-            {  name: "Black Tea",img:"../img/pizzas/gavai.webp",weight : 0.5,measure:"л", price: 15 },
-            {  name: "Green Tea",img:"../img/pizzas/gavai.webp",weight : 0.5, measure:"л",price: 15 },
-            { name: "Americano",img:"../img/pizzas/barbeku.webp",weight : 0.3,measure:"л", price: 20 },
-            { name: "Cappuchino",img:"../img/pizzas/barbeku.webp",weight : 0.3, measure:"л",price: 20 },
-            { name: "Latte",img:"../img/pizzas/barbeku.webp",weight : 0.3,measure:"л", price: 20 },
-        ]
-    }]
+        temp.list = response.data;
+        console.log("temp  : " + temp.list);
+    });
 }
+function PushToOrder(){
+    alert("Would you a pizza?");
+};

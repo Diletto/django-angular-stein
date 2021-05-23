@@ -21,5 +21,10 @@ var app = angular.module('app', ["ngRoute"])
             templateUrl:'views/salads.html',
             controller:'SaladsController'
         });
+        $routeProvider.when('/orders',
+        {
+            templateUrl:'views/profile.html',
+            controller:'OrdersController'
+        });
 
 });
