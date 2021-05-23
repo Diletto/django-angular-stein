@@ -14,7 +14,7 @@ def get_all_pizzas(request):
 
     for pizza_class in all_pizzas_classes:
         serialized_class_obj = PitsaClassSerializer(pizza_class).data
-        serialized_class_obj['items'] = json.dumps(json.loads(serialized_class_obj['items']), ensure_ascii=False)
+        serialized_class_obj['items'] = json.loads(serialized_class_obj['items'])
         response.append(serialized_class_obj)
 
     return  JsonResponse({'items' : response}, safe=False, json_dumps_params={'ensure_ascii': False})
