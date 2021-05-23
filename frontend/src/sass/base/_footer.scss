@@ -1,0 +1,6 @@
+.footer{
+    background-color: $yellow;
+    height:$height-line;
+    font-weight: bold;
+    @include font($black, false, $size-text-smaller)
+}

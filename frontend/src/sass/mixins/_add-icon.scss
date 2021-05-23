@@ -1,0 +1,13 @@
+@mixin add-icon($image-path, $x : 100%, $y : 100%, $color: $black) {
+    content: "";
+    display: inline-block;
+    width: $x;
+    height: $y;
+    -webkit-mask-image : url($image-path);
+    mask-image: url($image-path);
+    background-color: $color;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    -webkit-mask-size: $x $y;
+    -webkit-mask-repeat: no-repeat;
+}

@@ -1,0 +1,11 @@
+.profile{
+    .name{
+        @include font($black, false, $size-text-max + 15px);
+    }
+    .email{
+        @include font($black, false, $size-text-bigger);
+    }
+    .phone{
+        @include font($black, false, $size-text-bigger);
+    }
+}

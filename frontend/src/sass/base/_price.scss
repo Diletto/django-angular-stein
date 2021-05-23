@@ -1,0 +1,17 @@
+.price-wrap{
+    .price{
+        width: auto;
+    }
+    span{
+        padding: 0; 
+    }
+    .number{
+        @include font($black, false, $size-text-max + 15px);
+        font-weight:bold; 
+        white-space: nowrap
+    }
+    .hrn{
+        @include font($black, false, $size-text-min);
+        font-style: italic;
+    }
+}

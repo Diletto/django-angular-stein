@@ -1,0 +1,12 @@
+div.col(ng-repeat = "it in itemList.items")
+    div.content-item
+        p.name.text-center {{it.name}}
+        img(src="{{it.img}}", alt="havai") 
+        p.ingred.text-center {{it.ingridients}}
+        p.weight.text-center {{it.weight}}{{it.measure}}
+        div.row.prise-block.m-0
+            div.col
+                include ../_partials/_price
+            div.col.p-1
+                button.add-to-list.btn(ng-click = controller + ".PushToOrder()") Додати до замовлення
+                //(ng-click="") 

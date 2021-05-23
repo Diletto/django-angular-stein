@@ -1,1 +1,32 @@
-$padding-size: 10px
+$backgroud-image-size: 20%;
+
+$size-text-max : 20px;
+$size-text-bigger : 18px;
+$size-text : 16px;
+$size-text-smaller : 14px;
+$size-text-min : 12px;
+
+$brown : #7F2415;
+$burgundy : #7F152E;
+$red : #D61800;
+$yellow : #EDAE01;
+$orange : #E94F08;
+$white : white;
+$black : black;
+
+$height-line : 30px;
+$price-width: 60px;
+$price-height: 20px;
+$row-height: 34px;
+
+$container-padding-x: var(--bs-gutter-x,.75rem);
+$container-max-widths-sm: 540px;
+$container-max-widths-md: 720px;
+$container-max-widths-lg: 960px;
+$container-max-widths-xl: 1140px;
+$container-max-widths-xxl: 1320px;
+
+
+$media-min-widths-lg: 992px;
+
+$magrig-1-col : calc(100%/12);

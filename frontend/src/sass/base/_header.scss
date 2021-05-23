@@ -1,13 +1,33 @@
 @import './_var';
-ul.nav {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100%;
-    li {
-        list-style-type: none;
-        a{
-            padding: $padding-size;
+@import '../mixins/_font';
+@import '../mixins/_add-icon';
+.main-menu {
+    .nav{
+    
+        > .col{
+            background-color: $red;
+    
+        }
+    }
+    .order {
+        background-color: $orange;
+        > p::before{
+            @include add-icon("../img/shopping-cart.svg", 20px, 20px, $white);
+            margin: 0 10px 4px 0;
+        }
+    }
+    a {
+        @include font();
+    }
+}
+
+.addit-menu{
+    div{
+        &:first-child{
+            font-weight: bold;
+        }
+        a {
+            @include font($black, false, $size-text-smaller);
         }
     }
 }

@@ -1,0 +1,12 @@
+@mixin font($color-text: $white, $upper-case : true, $size : $size-text) {
+    color: $color-text;
+    font-size: $size;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    @if $upper-case {
+        text-transform: uppercase;
+    }
+    &:hover {
+        color: $color-text; 
+    }
+}

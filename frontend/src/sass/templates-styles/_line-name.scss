@@ -1,0 +1,20 @@
+$name-file : "../img/horisontal-line.svg";
+$x : 250px;
+$y : 20px;
+$margin-x : 10px;
+$margin-y : 4px;
+.line{
+    height: $height-line;
+    font-weight: bold;
+    @include font($black, True, $size-text);
+     > .name {
+        &::before{
+            @include add-icon($name-file, $x, $y);
+            margin: 0 $margin-x $margin-y 0;
+        }  
+        &::after{
+            @include add-icon($name-file, $x, $y);
+            margin: 0 0 $margin-y $margin-x ;
+        }  
+    }
+}

@@ -1,0 +1,24 @@
+.order {
+    .text{
+        margin: 10px $magrig-1-col!important
+    }
+    .status-text{
+        margin: 10px 0 0 0;
+        @include font($black, false, $size-text);
+        font-weight:bold; 
+    }
+    .number{
+        @include font($black, false, $size-text-max);
+    }
+    .wrap{
+        width: $price-width;
+        height: $price-height;
+    }
+    .content{
+        @include font($black, true, $size-text-max);
+        color: $red;
+        &:hover{
+            color: $red;
+        }
+    }
+}
